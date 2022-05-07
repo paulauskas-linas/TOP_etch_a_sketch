@@ -12,8 +12,32 @@
     <header>
         <h1><a href="#">Etch-a-sketch</a></h1>  
     </header>
-    <main>
-
+    <main class="debug">
+        <div class="intro-text">This is a game of Etch-a-sketch. Enjoy</div>
+        <div class="game-container debug">
+            <div class="controls-container debug">
+                <div class="colors-container">
+                    <div class="color-container">
+                        <label for="color-picker">Color Picker</label>
+                        <input type="color" name="color-picker" id="color-picker" value="#000000">
+                    </div>
+                    </div>
+                    <button id="default-color">Default Color</button>
+                    <button id="random-color">Random Color</button>
+                    <div class="size-container">
+                        <label for="size">Size</label>
+                        <input type="range" name="size" id="size-slider" min="2" max="96" step="2" value="6" >
+                    </div>
+                    <button id="eraser">Eraser</button>
+                    <button id="clear">Clear Tablet</button>
+            </div>
+            <div class="tablet-container debug">
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+            </div>
+        </div>
     </main>
     <footer>
         <div class="footer-group">
