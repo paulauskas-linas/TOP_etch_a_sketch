@@ -14,7 +14,7 @@ a {text-decoration: none; color: unset;}
 a:visited {color: unset;}
 
 :root {
-    --grid-size: 2;
+    --grid-size: 3;
 }
 .debug { border: 2px solid red;}
 /******* Global End */
@@ -80,36 +80,32 @@ header {
 /******* Main Start */
 
 main {
-    /* position: relative; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* flex-grow: 0; */
     padding-top: 4rem;
     padding-bottom: 5rem;
     margin-top: 2rem;
     margin-bottom: 20rem;
-    /* width: 100vw; */
-    height: 95vh;
+    width: 100vw;
+    height: 90vh; 
 }
 
 /******* Main end */
 
 .intro-text {
     font-size: 1.25em;
+    height: 80px;
     /* width: 100%; */
 }
 
 .game-container {
-    width: 100%;
-    /* margin-top: 5rem; */
-    /* padding-top: 4rem; */
-    /* padding-bottom: 5rem; */
     display: flex;
     justify-content: center;
-    /* align-items: center; */
-    height: 100%;
+    align-items: center;
+    /* height: 100%; */
+    width: 100%;
 }
 .controls-container, .size-container, .color-container  {
     display: flex;
@@ -119,23 +115,42 @@ main {
     width: 100%;
 }
 .controls-container {
-    flex-shrink: 0;
     justify-content: space-around;
-    /* height: 70vh; */
+    height: 100%;
 }
 
 .tablet-container {
     display: grid;
     grid-template-rows: repeat(var(--grid-size), 1fr);
     grid-template-columns: repeat(var(--grid-size), 1fr);
+    height: 600px;
     width: 600px;
     margin-left: 20px;
-    box-shadow: 0px 5px 5px 0px rgba(90,90,90,0.3);
+    border: 0.5px black solid;
+    box-shadow: 7px 8px 20px 0px rgba(90,90,90,0.3);
 }
 
 .cell {
-    /* padding-top: 100%; */
-    border: 1px black solid;
+    padding-bottom: 100%;
+}
+.cell-border {
+    border: 0.5px black solid;
+}
+button {
+    border: none;
+    font-size: 1em;
+    font-family: inherit;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+button:hover {
+    box-shadow: 1px 2px 5px 0px rgba(90,90,90,0.3);
+    cursor: pointer;
+}
+
+label {
+    font-family: inherit;
 }
 /******* Media Queries */
 @media screen and (max-width: 50em) {
